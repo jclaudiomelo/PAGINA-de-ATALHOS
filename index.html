@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MENU GR</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <nav class="menu_navegar">
+        <ul>
+            <li><a href="index.html">INICIO</a></li>
+
+            <li><a href="#">GR NEGOCIOS</a>
+                <ul>
+                    <li><a onclick="carregarConteudo('https://www.sicacred.com.br:7076/?url=sica')"id="sicacred">SICACRED</a></li>
+                    <li><a onclick="carregarConteudo('https://www.sicacred.com.br:8081/')" id="grcobranca">GR COBRANÇA</a></li>
+                    <li><a onclick="carregarConteudo('https://www.grsuite.com.br/')" id="grsuite">GR SUITE</a></li>
+                </ul>
+            </li>
+           
+            <li><a onclick="carregarConteudo('https://sys.acspontodigital.com.br/')" id="easydots">EASY DOTS </a></li>
+            <li><a onclick="carregarConteudo(' https://app.octadesk.com/ticket/list')" id="easydots">OCTADESK </a></li>
+
+            <li><a href="#">CONSULTAS</a>
+                <ul>
+                    <li><a onclick="carregarConteudo('https://solucoes.receita.fazenda.gov.br/servicos/cnpjreva/cnpjreva_solicitacao.asp')"id="sicacred">CNPJ</a></li>
+                 
+                </ul>
+            </li>
+            
+
+        </ul>
+    </nav>
+
+    <div id="conteudo">
+        <iframe id="iframe" src=""></iframe>
+    </div>
+</body>
+<script>
+function carregarConteudo(url) {
+    document.getElementById('iframe').src = url;
+}
+</script>
+
+</html>

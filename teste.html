@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menu dropdown</title>
+    <style>
+        html,
+        body {
+            margin: 0;
+            padding: 0;
+            height: 100%;
+            overflow: hidden;
+        }
+
+        #conteudo {
+            height: 100%;
+        }
+
+        #iframe {
+            width: 100%;
+            height: 100%;
+            border: none;
+        }
+    </style>
+</head>
+
+<body>
+    <nav class="menu_navegar">
+        <ul>
+            <li><a href="index.html">Inicio</a></li>
+            <li><a href="#">GR NEGOCIOS</a>
+                <ul>
+                    <li><a onclick="carregarConteudo('https://www.sicacred.com.br:7076/?url=sica')" id="sicacred">SICACRED</a></li>
+                    <li><a onclick="carregarConteudo('https://www.sicacred.com.br:8081/')" id="grcobranca">GR COBRANÇA</a></li>
+                    <li><a onclick="carregarConteudo('https://grsuite.com.br/')" id="grsuite">GR SUITE</a></li>
+                </ul>
+            </li>
+            <li><a onclick="carregarConteudo('https://easydots.com.br/')" id="easydots">EASY DOTS</a></li>
+            <li><a href="#">Quem somos</a></li>
+        </ul>
+    </nav>
+    <div id="conteudo">
+        <iframe id="iframe" src=""></iframe>
+    </div>
+
+    <script>
+        function carregarConteudo(url) {
+            document.getElementById('iframe').src = url;
+        }
+    </script>
+</body>
+
+</html>
